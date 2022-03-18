@@ -13,10 +13,6 @@ filterOption.addEventListener("click", filterTodo);
 //Functions
 //creating addTodo function 
 function addTodo(event) {
-    if (mainInput.value === ' ') {
-        // alert('You have to specify your task first.');
-        return false;
-    }
     //preventing form from submitting 
     event.preventDefault();
     //creating new div
@@ -35,7 +31,7 @@ function addTodo(event) {
     checkButton.classList.add("check-btn");
     newDiv.appendChild(checkButton);
 
-    //creating trash button
+    //creating delete button
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
     deleteButton.classList.add("delete-btn");
