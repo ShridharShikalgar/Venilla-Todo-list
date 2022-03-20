@@ -13,6 +13,9 @@ filterOption.addEventListener("click", filterTodo);
 //Functions
 //creating addTodo function 
 function addTodo(event) {
+    if (todoInput.value == "") {
+        return alert("Input Box can not be empty!");
+    }
     //preventing form from submitting 
     event.preventDefault();
     //creating new div
